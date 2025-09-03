@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MargDarshak – Resume Helper</title>
+  <link rel="stylesheet" href="resume.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <h2 class="logo">MargDarshak 🚀</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html" class="active">Resume Helper</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Resume Helper -->
+  <section class="resume-section">
+    <h2>📝 Resume Improvement Tool</h2>
+    <p>Paste your resume point, and we’ll suggest a better version.</p>
+
+    <textarea id="resumeInput" placeholder="e.g. I worked on a project in Java"></textarea>
+    <button onclick="improveResume()">Improve</button>
+
+    <div id="resumeOutput"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 MargDarshak | Built with ❤️ for GenAI Hackathon 💡</p>
+  </footer>
+
+  <script src="resume.js"></script>
+</body>
+</html>

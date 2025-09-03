@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Quiz – MargDarshak</title>
+  <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <h2>MargDarshak 🚀</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Quiz Section -->
+  <section class="quiz-section">
+    <h2>Career Quiz 🎯</h2>
+    <form id="quizForm">
+
+      <div class="question">
+        <p>1️⃣ What excites you the most?</p>
+        <label><input type="radio" name="q1" value="tech"> Building Apps & Coding</label><br>
+        <label><input type="radio" name="q1" value="data"> Analyzing Data</label><br>
+        <label><input type="radio" name="q1" value="design"> Designing UI/UX</label><br>
+        <label><input type="radio" name="q1" value="business"> Business & Communication</label>
+      </div>
+
+      <div class="question">
+        <p>2️⃣ Which skill describes you best?</p>
+        <label><input type="radio" name="q2" value="logic"> Problem Solving</label><br>
+        <label><input type="radio" name="q2" value="creativity"> Creativity</label><br>
+        <label><input type="radio" name="q2" value="analysis"> Analytical Thinking</label><br>
+        <label><input type="radio" name="q2" value="leadership"> Leadership</label>
+      </div>
+
+      <div class="question">
+        <p>3️⃣ What kind of work environment do you prefer?</p>
+        <label><input type="radio" name="q3" value="solo"> Independent</label><br>
+        <label><input type="radio" name="q3" value="team"> Team Oriented</label><br>
+        <label><input type="radio" name="q3" value="creative"> Creative Space</label><br>
+        <label><input type="radio" name="q3" value="fast"> Fast-Paced Business</label>
+      </div>
+
+      <button type="submit">See My Career Path 🚀</button>
+    </form>
+
+    <div id="quizResult"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 MargDarshak – Built for GenAI Hackathon 💡</p>
+  </footer>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
