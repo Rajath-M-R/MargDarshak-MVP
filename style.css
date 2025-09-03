@@ -1,47 +1,50 @@
-body {
+/* Reset default styles */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f4f9;
-  color: #333;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body background */
+body {
+  background: linear-gradient(to right, #74ebd5, #ACB6E5);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: #2c3e50;
+  padding: 20px;
 }
 
 /* Navbar */
-.navbar {
+header {
+  width: 100%;
   background: #2c3e50;
   color: white;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 0 0 10px 10px;
 }
 
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.navbar ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-/* Hero Section */
+/* Hero section */
 .hero {
   text-align: center;
-  padding: 100px 20px;
-  background: linear-gradient(to right, #3498db, #8e44ad);
-  color: white;
+  margin-top: 40px;
 }
 
-.hero button {
-  background: white;
-  color: #333;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
+.hero h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #34495e;
 }
 
 /* Form Section */
@@ -49,14 +52,17 @@ body {
   background: #fff;
   padding: 40px;
   max-width: 500px;
-  margin: 50px auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .form-section h2 {
   text-align: center;
   margin-bottom: 20px;
+  font-size: 22px;
+  color: #2c3e50;
 }
 
 .form-section form {
@@ -65,23 +71,44 @@ body {
   gap: 15px;
 }
 
+.form-section label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
 .form-section input {
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 6px;
+  transition: border 0.3s ease;
+}
+
+.form-section input:focus {
+  border-color: #3498db;
+  outline: none;
 }
 
 .form-section button {
-  padding: 12px;
+  padding: 14px;
   background: #3498db;
   color: white;
+  font-weight: bold;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
+.form-section button:hover {
+  background: #2980b9;
+}
+
+/* Output box */
 #output {
-  margin-top: 20px;
-  font-weight: bold;
+  margin-top: 25px;
+  padding: 15px;
+  background: #ecf0f1;
+  border-radius: 6px;
   text-align: center;
+  font-size: 18px;
 }
