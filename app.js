@@ -1,3 +1,3 @@
-function greet() {
-  alert("Hello from MargDarshak 🚀");
+function getStarted() {
+  alert("🚀 Welcome to MargDarshak! More features coming soon...");
 }
