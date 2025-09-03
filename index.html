@@ -3,46 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MargDarshak - AI Career Guide</title>
+  <title>MargDarshak – Career Guidance</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <!-- Navbar -->
-  <nav class="navbar">
-    <h1>MargDarshak</h1>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Login</a></li>
-    </ul>
-  </nav>
+  <header>
+    <nav>
+      <h2>MargDarshak 🚀</h2>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Quiz</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- Hero Section -->
   <section class="hero">
-    <h2>Your AI-Powered Career Guide 🚀</h2>
-    <p>Helping students choose the right career path with AI insights.</p>
-    <button onclick="getStarted()">Get Started</button>
+    <h1>Welcome to MargDarshak</h1>
+    <p>Your personalized career & skills advisor for the future job market.</p>
   </section>
 
   <!-- Career Form Section -->
-<section class="form-section">
-  <h2>Find Your Career Path</h2>
-  <form id="careerForm">
-    <label for="name">Name:</label>
-    <input type="text" id="name" required>
+  <section class="form-section">
+    <h2>Find Your Career Path</h2>
+    <form id="careerForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
 
-    <label for="interests">Your Interests:</label>
-    <input type="text" id="interests" placeholder="e.g. Coding, Design" required>
+      <label for="interests">Your Interests:</label>
+      <input type="text" id="interests" placeholder="e.g. Coding, Design" required>
 
-    <label for="skills">Your Skills:</label>
-    <input type="text" id="skills" placeholder="e.g. Java, Communication" required>
+      <label for="skills">Your Skills:</label>
+      <input type="text" id="skills" placeholder="e.g. Java, Communication" required>
 
-    <button type="submit">Get Suggestions</button>
-  </form>
+      <button type="submit">Get Suggestions</button>
+    </form>
 
-  <div id="output"></div>
-</section>
+    <!-- Career Output -->
+    <div id="output"></div>
+  </section>
 
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 MargDarshak – Built for GenAI Hackathon 💡</p>
+  </footer>
 
   <script src="app.js"></script>
 </body>
