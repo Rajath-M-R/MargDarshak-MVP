@@ -1,21 +1,30 @@
-function improveResume() {
-  const input = document.getElementById("resumeInput").value.trim();
-  let improved = "";
+document.getElementById("resumeForm").addEventListener("submit", function(event) {
+  event.preventDefault();
 
-  if (!input) {
-    document.getElementById("resumeOutput").innerHTML = "⚠️ Please enter a resume point.";
-    return;
-  }
+  const fullname = document.getElementById("fullname").value;
+  const email = document.getElementById("email").value;
+  const skills = document.getElementById("skills").value;
+  const experience = document.getElementById("experience").value;
 
-  if (input.toLowerCase().includes("project")) {
-    improved = "Led and developed a project in Java, focusing on problem-solving and performance optimization.";
-  } else if (input.toLowerCase().includes("team")) {
-    improved = "Collaborated effectively within a team to deliver impactful results and meet deadlines.";
-  } else if (input.toLowerCase().includes("communication")) {
-    improved = "Enhanced communication skills by presenting ideas clearly and influencing decision-making.";
-  } else {
-    improved = "Improved: " + input.charAt(0).toUpperCase() + input.slice(1) + " with measurable impact and professional tone.";
-  }
+  const resumeContent = `
+    <h2>${fullname}</h2>
+    <p><strong>Email:</strong> ${email}</p>
+    <p><strong>Skills:</strong> ${skills}</p>
+    <p><strong>Experience:</strong> ${experience}</p>
+  `;
 
-  document.getElementById("resumeOutput").innerHTML = `✨ Suggested: <br><br> ${improved}`;
-}
+  document.getElementById("resumeOutput").innerHTML = resumeContent;
+
+  emailjs.send("service_6a8s1fn", "template_hfp7ey1", {
+    user_name: fullname,
+    user_email: email,
+    message: `Resume Builder Submission:
+      Name: ${fullname}
+      Email: ${email}
+      Skills: ${skills}
+      Experience: ${experience}`
+  }).then(
+    function() { alert("Your resume details have been emailed!"); },
+    function(error) { alert("Error sending email. Try again."); console.error(error); }
+  );
+});

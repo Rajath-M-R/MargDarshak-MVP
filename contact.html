@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - MargDarshak</title>
+  <link rel="stylesheet" href="contact.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("YOUR_USER_ID");
+    })();
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1>
+    <p>Have questions? Get in touch!</p>
+  </header>
+
+  <main>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
+
+  <script src="contact.js"></script>
+</body>
+</html>

@@ -3,39 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MargDarshak – Resume Helper</title>
+  <title>Resume Builder - MargDarshak</title>
   <link rel="stylesheet" href="resume.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("YOUR_USER_ID");
+    })();
+  </script>
 </head>
 <body>
-
-  <!-- Navbar -->
   <header>
-    <nav>
-      <h2 class="logo">MargDarshak 🚀</h2>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="resume.html" class="active">Resume Helper</a></li>
-        <li><a href="quiz.html">Quiz</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </nav>
+    <h1>Resume Builder</h1>
+    <p>Fill in your details to generate a professional resume.</p>
   </header>
 
-  <!-- Resume Helper -->
-  <section class="resume-section">
-    <h2>📝 Resume Improvement Tool</h2>
-    <p>Paste your resume point, and we’ll suggest a better version.</p>
-
-    <textarea id="resumeInput" placeholder="e.g. I worked on a project in Java"></textarea>
-    <button onclick="improveResume()">Improve</button>
+  <main>
+    <form id="resumeForm">
+      <input type="text" id="fullname" placeholder="Full Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="text" id="skills" placeholder="Skills (comma separated)" required>
+      <textarea id="experience" placeholder="Work Experience" required></textarea>
+      <button type="submit">Generate Resume</button>
+    </form>
 
     <div id="resumeOutput"></div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 MargDarshak | Built with ❤️ for GenAI Hackathon 💡</p>
-  </footer>
+  </main>
 
   <script src="resume.js"></script>
 </body>
