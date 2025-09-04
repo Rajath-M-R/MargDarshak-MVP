@@ -1,0 +1,19 @@
+{
+  "name": "margdarshak",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm --workspace @margdarshak/web run dev",
+    "dev:api": "npm --workspace @margdarshak/api run dev",
+    "dev": "concurrently \"npm:dev:web\" \"npm:dev:api\"",
+    "build": "npm --workspaces run build",
+    "start": "npm --workspace @margdarshak/api run start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
